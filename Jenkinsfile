@@ -5,7 +5,6 @@ stages {
  steps {
  script {
     checkout scm
-    
      }
     }
    }
@@ -13,7 +12,7 @@ stages {
  stage('build customer app code') {
  steps {
   script {
-        sudo apt install maven
+       sh 'yum -y install maven'
     }
   }
  }
