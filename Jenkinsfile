@@ -6,8 +6,7 @@ stages {
  script {
     checkout scm
 
-     sh 'apt-get install -y default-jdk'
-     sh 'sudo apt install -y maven'
+   
   
      }
     }
@@ -17,8 +16,6 @@ stages {
  steps {
   script {
     
-        sh 'sudo apt install -y maven'
-        sh 'mvn clean install'
     }
   }
  }
