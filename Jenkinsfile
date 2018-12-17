@@ -4,6 +4,7 @@ stages {
  stage('CodeCheckout') {
  steps {
  script {
+    echo "In codecheckout"
     checkout scm
      }
     }
@@ -12,6 +13,7 @@ stages {
  stage('build customer app code') {
  steps {
   script {
+      echo "In cust app"
        sh 'yum -y install maven'
     }
   }
