@@ -27,7 +27,6 @@ stages {
  steps {
   script {
        sh 'docker build -t rakeshraheja89/project .'
-       sh 'docker container run -d -p 3003:8080 -v  /var/run/docker.sock:/var/run/docker.sock rakeshraheja89/project'
        sh 'docker login -u=$env.user -p=$env.password'
         sh "docker push rakeshraheja89/project"
         
