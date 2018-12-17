@@ -4,21 +4,11 @@ stages {
  stage('CodeCheckout') {
  steps {
  script {
-    checkout scm
-
-   
-  
+    checkout scm  
      }
     }
    }
    
- stage('build customer app code') { 
- steps {
-  script {
-    
-    }
-  }
- }
  
   stage('docker images code') { 
  steps {
