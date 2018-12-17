@@ -28,8 +28,8 @@ stages {
   script {
        sh 'docker build -t rakeshraheja89/project .'
        sh 'docker container run -d -p 3003:8080 -v  /var/run/docker.sock:/var/run/docker.sock rakeshraheja89/project'
-        sh 'sudo apt install -y maven'
-        sh 'mvn clean install'
+        sh 'docker push rakeshraheja89/project'
+        
     }
   }
  }
