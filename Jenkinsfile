@@ -1,17 +1,22 @@
-pipeline { 
-  agent any
- stages {
-   stage('Checkout code') {
-        steps {
-            checkout scm
-        }
- }
- stage ('Build') { 
-  steps { 
-    echo 'Running Build Automation'
-    sh './gradlew build --no-daemon'
-    archiveArtifacts artifacts: 'dist/sampleapp.zip'
+pipeline {
+ agent any
+stages {
+ stage('CodeCheckout') {
+ steps {
+ script {
+    checkout scm
+     def mvnHome = tool 'maven-3'
+     }
+    }
    }
+   
+ stage('build customer app code') { 
+ steps {
+  script {
+        def mvnHome = tool 'maven-3'
+        sh 'mvn clean install'
+    }
   }
+ }
  }
 }
