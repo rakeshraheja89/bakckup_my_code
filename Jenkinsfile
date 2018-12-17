@@ -14,7 +14,7 @@ stages {
  steps {
   script {
       echo "In cust app"
-       sh 'yum -y install maven'
+       sh 'sudo apt install maven'
     }
   }
  }
