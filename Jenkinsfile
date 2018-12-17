@@ -5,7 +5,7 @@ stages {
  steps {
  script {
     checkout scm
-     def mvnHome = tool 'maven-3'
+    
      }
     }
    }
@@ -13,8 +13,7 @@ stages {
  stage('build customer app code') {
  steps {
   script {
-        def mvnHome = tool 'maven-3'
-        sh 'mvn clean install'
+        sudo apt install maven
     }
   }
  }
