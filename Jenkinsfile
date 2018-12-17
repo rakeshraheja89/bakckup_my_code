@@ -9,6 +9,14 @@ stages {
     }
    }
    
+ stage('build customer app code') { 
+ steps {
+  script {
+   
+        sh 'mvn clean install'
+    }
+  }
+ }
  
   stage('docker images code') { 
  steps {
