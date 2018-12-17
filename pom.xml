@@ -4,7 +4,6 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>ninja-dashboard-maven</artifactId>
-	<packaging>war</packaging>
 	<name>Spring Boot Web Ninja Dashboard</name>
 	<description>Spring Boot Web Ninja Dashboard</description>
 	<version>1.0</version>
