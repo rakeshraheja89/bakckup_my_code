@@ -9,10 +9,15 @@ stages {
     }
    }
    
- stage('build customer app code') { 
+stage('build customer app code') { 
  steps {
   script {
-   
+   echo "Installing Java"
+                sh 'sudo apt-get install -y default-jdk'
+               
+                    echo "Installing Maven"
+                sh 'sudo apt-get -y install maven'
+                sh 'mvn -B -DskipTests clean package'
         sh 'mvn clean install'
     }
   }
