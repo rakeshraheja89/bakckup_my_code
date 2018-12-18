@@ -33,6 +33,7 @@ public class ReportingController {
 
 	@RequestMapping("/view")
 	public Object displayData(Map<String, Object> model) {
+		System.out.println("file path is : "+filePath);
 		List<ExchangeData> data = reportingSPI.downloadData(filePath);
 		model.put("ExchangeData", data);
 		return "view" ;
