@@ -10,7 +10,6 @@ import numpy as np
 import datetime as dt
 import calendar as cal
 
-
 m_df = pd.read_csv("./prepare_data/data/raw/all_sentimet_fx.csv")
 m_df['Date1'] = pd.to_datetime(m_df['Date1'])
 m_df.sort_values(by=['Date1'],ascending=True)
