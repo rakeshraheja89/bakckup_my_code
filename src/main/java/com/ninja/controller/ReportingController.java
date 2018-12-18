@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.ninja.model.ExchangeData;
 import com.ninja.service.ReportingSPI;
 
+
 @Controller
 public class ReportingController {
 
@@ -34,7 +35,7 @@ public class ReportingController {
 	public Object displayData(Map<String, Object> model) {
 		List<ExchangeData> data = reportingSPI.downloadData(filePath);
 		model.put("ExchangeData", data);
-		return "view";
+		return "view" ;
 	}
 
 }
