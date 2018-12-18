@@ -1,4 +1,4 @@
-package com.ninja.controller;
+/*package com.ninja.controller;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -29,3 +29,4 @@ public class ReportingControllerTest {
                 .andExpect(content().string(equalTo("application version is 13.0.21")));
     }
 }
+*/
