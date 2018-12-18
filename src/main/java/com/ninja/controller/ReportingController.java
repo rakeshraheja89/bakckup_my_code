@@ -25,7 +25,7 @@ public class ReportingController {
 	@Value("${filePath}")
 	private String filePath;
 
-	@RequestMapping("/version")
+	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
 		model.put("message", "application version is 13.0.21");
 		return "welcome";
