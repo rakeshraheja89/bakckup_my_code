@@ -15,24 +15,65 @@
 
 
 <table cellspacing="4" cellpadding="4" border="3">
- 
-<tr><th>Source</th><th>Stock</th><th>HighPrice</th><th>LowPrice</th><th>
-NoOfShare</th><th>CurrentPrice</th><th>CostOfPurchase</th><ThcurrentPortfolio</th><th>PercentageGain</th></tr>
 
-<c:forEach items="${ExchangeData}" var="notices">
+<h3>       Data1
+</h3>
+ 
+<tr><th>Stock</th><th>NoOfShare</th><th>Bought</th><th>High</th><th>low</th><th>CurrentPrice</th><th>Gain</th></tr>
+
+<c:forEach items="${ExchangeData1}" var="notices">
     <tr>
-        <td>${notices.source}</td>
         <td>${notices.stock}</td>
-        <td>${notices.highPrice}</td>
-        <td>${notices.lowPrice}</td>
         <td>${notices.noOfShare}</td>
+        <td>${notices.bought}</td>
+        <td>${notices.high}</td>
+        <td>${notices.low}</td>
         <td>${notices.currentPrice}</td>
-        <td>${notices.currentPortfolio}</td>
-        <td>${notices.percentageGain}</td>
+        <td>${notices.gain}</td>
     </tr>
 </c:forEach>
 
 
+<table cellspacing="4" cellpadding="4" border="3">
+
+<h3>       Data2
+</h3>
+ 
+<tr><th>Stock</th><th>NoOfShare</th><th>Bought</th><th>High</th><th>low</th><th>CurrentPrice</th><th>Gain</th></tr>
+
+<c:forEach items="${ExchangeData2}" var="notices">
+    <tr>
+        <td>${notices.stock}</td>
+        <td>${notices.noOfShare}</td>
+        <td>${notices.bought}</td>
+        <td>${notices.high}</td>
+        <td>${notices.low}</td>
+        <td>${notices.currentPrice}</td>
+        <td>${notices.gain}</td>
+    </tr>
+</c:forEach>
+
+
+
+
+<table cellspacing="4" cellpadding="4" border="3">
+
+<h3>       Data3
+</h3>
+ 
+<tr><th>Stock</th><th>NoOfShare</th><th>Bought</th><th>High</th><th>low</th><th>CurrentPrice</th><th>Gain</th></tr>
+
+<c:forEach items="${ExchangeData3}" var="notices">
+    <tr>
+        <td>${notices.stock}</td>
+        <td>${notices.noOfShare}</td>
+        <td>${notices.bought}</td>
+        <td>${notices.high}</td>
+        <td>${notices.low}</td>
+        <td>${notices.currentPrice}</td>
+        <td>${notices.gain}</td>
+    </tr>
+</c:forEach>
 
 
 
