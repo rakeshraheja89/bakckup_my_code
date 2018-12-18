@@ -1,0 +1,38 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: ninja-dashboard-maven
+  labels:
+    app: myapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: rakeshraheja89/project
+        ports:
+        - containerPort: 8090
+     
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp
+spec:
+  selector:
+    app: myapp
+  type: NodePort
+  ports:
+  - name: http
+    port: 8090
+    targetPort: 8090
+    nodePort: 30035
+    protocol: TCP
