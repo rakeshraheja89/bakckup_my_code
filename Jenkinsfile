@@ -1,13 +1,14 @@
 pipeline {
  agent any
 stages {
+ 
  stage('CodeCheckout') {
  steps {
  script {
     checkout scm  
      }
     }
-   }
+   } /* code checkout ends */
  
  stage('Junit Test') {
             steps {
@@ -18,7 +19,7 @@ stages {
                     junit 'target/surefire-reports/*.xml'
                 }
             }
-        }
+        } /* Junit test ends */
    
  stage('build customer app code') { 
  steps {
@@ -32,7 +33,7 @@ stages {
         sh 'mvn clean install'
     }
   }
- }
+ } /* Customer app code ends */
  
  
  
