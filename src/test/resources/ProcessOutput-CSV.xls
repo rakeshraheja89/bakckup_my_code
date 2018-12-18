@@ -1,0 +1,12 @@
+Source,Stock,HighPrice,LowPrice,No. Of Shares,Current Price,Cost of Purchase,Current Portfolio,%Gain
+NSE,TCS,2100,1910,100,1900,300,400,10%
+NSE,TATASTEEL,2000,2010,0,2000,200,500,10%
+NSE,TATAMOTORS,1900,2110,-100,2100,100,600,5%
+NSE,TATACOFFEE,1800,2210,-200,2200,0,700,10%
+NSE,TITAN,,,,,,,
+BSE,TCS,2100,1910,100,1900,300,400,10%
+BSE,,,,,,,,
+BSE,,,,,,,,
+BSE,,,,,,,,
+BSE,,,,,,,,
+,,,,,,,,
