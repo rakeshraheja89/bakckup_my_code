@@ -6,6 +6,6 @@ import com.ninja.model.ExchangeData;
 
 public interface ReportingSPI {
 
-	public List<ExchangeData> downloadData(String filePath);
+	public List<ExchangeData> downloadData(String filePath, String fileType);
 
 }

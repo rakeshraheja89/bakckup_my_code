@@ -2,23 +2,13 @@ package com.ninja.model;
 
 public class ExchangeData {
 
-	private String source;
 	private String stock;
-	private String highPrice;
-	private String lowPrice;
 	private String noOfShare;
+	private String bought;
+	private String high;
+	private String low;
 	private String currentPrice;
-	private String costOfPurchase;
-	private String currentPortfolio;
-	private String percentageGain;
-
-	public String getSource() {
-		return source;
-	}
-
-	public void setSource(String source) {
-		this.source = source;
-	}
+	private String gain;
 
 	public String getStock() {
 		return stock;
@@ -26,22 +16,6 @@ public class ExchangeData {
 
 	public void setStock(String stock) {
 		this.stock = stock;
-	}
-
-	public String getHighPrice() {
-		return highPrice;
-	}
-
-	public void setHighPrice(String highPrice) {
-		this.highPrice = highPrice;
-	}
-
-	public String getLowPrice() {
-		return lowPrice;
-	}
-
-	public void setLowPrice(String lowPrice) {
-		this.lowPrice = lowPrice;
 	}
 
 	public String getNoOfShare() {
@@ -52,6 +26,30 @@ public class ExchangeData {
 		this.noOfShare = noOfShare;
 	}
 
+	public String getBought() {
+		return bought;
+	}
+
+	public void setBought(String bought) {
+		this.bought = bought;
+	}
+
+	public String getHigh() {
+		return high;
+	}
+
+	public void setHigh(String high) {
+		this.high = high;
+	}
+
+	public String getLow() {
+		return low;
+	}
+
+	public void setLow(String low) {
+		this.low = low;
+	}
+
 	public String getCurrentPrice() {
 		return currentPrice;
 	}
@@ -60,42 +58,24 @@ public class ExchangeData {
 		this.currentPrice = currentPrice;
 	}
 
-	public String getCostOfPurchase() {
-		return costOfPurchase;
+	public String getGain() {
+		return gain;
 	}
 
-	public void setCostOfPurchase(String costOfPurchase) {
-		this.costOfPurchase = costOfPurchase;
-	}
-
-	public String getCurrentPortfolio() {
-		return currentPortfolio;
-	}
-
-	public void setCurrentPortfolio(String currentPortfolio) {
-		this.currentPortfolio = currentPortfolio;
-	}
-
-	public String getPercentageGain() {
-		return percentageGain;
-	}
-
-	public void setPercentageGain(String percentageGain) {
-		this.percentageGain = percentageGain;
+	public void setGain(String gain) {
+		this.gain = gain;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((costOfPurchase == null) ? 0 : costOfPurchase.hashCode());
-		result = prime * result + ((currentPortfolio == null) ? 0 : currentPortfolio.hashCode());
+		result = prime * result + ((bought == null) ? 0 : bought.hashCode());
 		result = prime * result + ((currentPrice == null) ? 0 : currentPrice.hashCode());
-		result = prime * result + ((highPrice == null) ? 0 : highPrice.hashCode());
-		result = prime * result + ((lowPrice == null) ? 0 : lowPrice.hashCode());
+		result = prime * result + ((gain == null) ? 0 : gain.hashCode());
+		result = prime * result + ((high == null) ? 0 : high.hashCode());
+		result = prime * result + ((low == null) ? 0 : low.hashCode());
 		result = prime * result + ((noOfShare == null) ? 0 : noOfShare.hashCode());
-		result = prime * result + ((percentageGain == null) ? 0 : percentageGain.hashCode());
-		result = prime * result + ((source == null) ? 0 : source.hashCode());
 		result = prime * result + ((stock == null) ? 0 : stock.hashCode());
 		return result;
 	}
@@ -109,45 +89,35 @@ public class ExchangeData {
 		if (getClass() != obj.getClass())
 			return false;
 		ExchangeData other = (ExchangeData) obj;
-		if (costOfPurchase == null) {
-			if (other.costOfPurchase != null)
+		if (bought == null) {
+			if (other.bought != null)
 				return false;
-		} else if (!costOfPurchase.equals(other.costOfPurchase))
-			return false;
-		if (currentPortfolio == null) {
-			if (other.currentPortfolio != null)
-				return false;
-		} else if (!currentPortfolio.equals(other.currentPortfolio))
+		} else if (!bought.equals(other.bought))
 			return false;
 		if (currentPrice == null) {
 			if (other.currentPrice != null)
 				return false;
 		} else if (!currentPrice.equals(other.currentPrice))
 			return false;
-		if (highPrice == null) {
-			if (other.highPrice != null)
+		if (gain == null) {
+			if (other.gain != null)
 				return false;
-		} else if (!highPrice.equals(other.highPrice))
+		} else if (!gain.equals(other.gain))
 			return false;
-		if (lowPrice == null) {
-			if (other.lowPrice != null)
+		if (high == null) {
+			if (other.high != null)
 				return false;
-		} else if (!lowPrice.equals(other.lowPrice))
+		} else if (!high.equals(other.high))
+			return false;
+		if (low == null) {
+			if (other.low != null)
+				return false;
+		} else if (!low.equals(other.low))
 			return false;
 		if (noOfShare == null) {
 			if (other.noOfShare != null)
 				return false;
 		} else if (!noOfShare.equals(other.noOfShare))
-			return false;
-		if (percentageGain == null) {
-			if (other.percentageGain != null)
-				return false;
-		} else if (!percentageGain.equals(other.percentageGain))
-			return false;
-		if (source == null) {
-			if (other.source != null)
-				return false;
-		} else if (!source.equals(other.source))
 			return false;
 		if (stock == null) {
 			if (other.stock != null)
@@ -159,10 +129,8 @@ public class ExchangeData {
 
 	@Override
 	public String toString() {
-		return "ExchangeData [source=" + source + ", stock=" + stock + ", highPrice=" + highPrice + ", lowPrice="
-				+ lowPrice + ", noOfShare=" + noOfShare + ", currentPrice=" + currentPrice + ", costOfPurchase="
-				+ costOfPurchase + ", currentPortfolio=" + currentPortfolio + ", percentageGain=" + percentageGain
-				+ "]";
+		return "ExchangeData [stock=" + stock + ", noOfShare=" + noOfShare + ", bought=" + bought + ", high=" + high
+				+ ", low=" + low + ", currentPrice=" + currentPrice + ", gain=" + gain + "]";
 	}
 
 }

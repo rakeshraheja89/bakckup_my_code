@@ -12,27 +12,27 @@ import org.springframework.stereotype.Service;
 import com.ninja.model.ExchangeData;
 import com.ninja.service.ReportingSPI;
 
-
 @Service
 public class ReportingImpl implements ReportingSPI {
 
 	@Override
-	public List<ExchangeData> downloadData(String dir) {
+	public List<ExchangeData> downloadData(String dir, String fileType) {
 		File folder = new File(dir);
 		List<ExchangeData> exchangeDataList = new ArrayList<ExchangeData>();
 		File[] fileNames = folder.listFiles();
 		for (File file : fileNames) {
 			// if directory call the same method again
 			if (file.isDirectory()) {
-				System.out.println("Please give correct directory name");
+				System.out.println("skip this directory");
 			} else {
-				try {
-					readDataFromFile(file, exchangeDataList);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				if (file.getName().contains(fileType)) {
+					try {
+						readDataFromFile(file, exchangeDataList);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 				}
-
 			}
 		}
 		return exchangeDataList;
@@ -51,15 +51,13 @@ public class ReportingImpl implements ReportingSPI {
 				ExchangeData exchangeData = new ExchangeData();
 				try {
 					String[] fields = line.split(",");
-					exchangeData.setSource(fields[0]);
-					exchangeData.setStock(fields[1]);
-					exchangeData.setHighPrice(fields[2]);
-					exchangeData.setLowPrice(fields[3]);
-					exchangeData.setNoOfShare(fields[4]);
+					exchangeData.setStock(fields[0]);
+					exchangeData.setNoOfShare(fields[1]);
+					exchangeData.setBought(fields[2]);
+					exchangeData.setHigh(fields[3]);
+					exchangeData.setLow(fields[4]);
 					exchangeData.setCurrentPrice(fields[5]);
-					exchangeData.setCostOfPurchase(fields[6]);
-					exchangeData.setCurrentPortfolio(fields[7]);
-					exchangeData.setPercentageGain(fields[8]);
+					exchangeData.setGain(fields[6]);
 				} catch (Exception e) {
 				}
 				exchangeDataList.add(exchangeData);
