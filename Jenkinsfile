@@ -14,11 +14,12 @@ stages {
             steps {
                 sh 'mvn test'
             }
-            post {
+  
+        /*   post {
                 always {
                     junit 'target/surefire-reports/*.xml'
-                }
-            }
+                } 
+            }*/
         } /* Junit test ends */
    
  stage('build customer app code') { 
