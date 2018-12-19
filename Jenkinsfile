@@ -44,6 +44,7 @@ stages {
      //  sh "docker login --username=$env.username --password=$env.password"
     //   sh 'docker push rakeshraheja89/project'
   // sh 'sudo docker run -p 3000:8090 -d  rakeshraheja89/project'
+   sh 'sudo -i'
    sh 'kubectl create -f application.yaml'
         
     }
