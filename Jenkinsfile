@@ -16,7 +16,7 @@ stages {
  steps {
   script {
    echo "Installing Java"
-                sh ' apt-get install -y default-jdk'
+               // sh ' apt-get install -y default-jdk'
                
                     echo "Installing Maven"
                 sh ' apt-get -y install maven'
