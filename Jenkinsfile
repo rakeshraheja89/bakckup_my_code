@@ -35,11 +35,7 @@ stages {
   }
  } /* Customer app code ends */
  
- 
- 
- 
- 
- /*
+
    stage('docker images code') { 
  steps {
   script {
@@ -50,7 +46,6 @@ stages {
         
     }
   }
- }
-*/
+  }
 }
 }
