@@ -52,15 +52,17 @@ stages {
   }
   }
  
- stage('Deploy the appl')
+ stage('Deploy the application')
  {
+	 steps{
 
 	kubernetesDeploy (
 	kubeConfigId: 'kubeconfig',
 	configs: 'application.yaml',
 	enableConfigSubstitution: false
 	)
-}
+		}
+ } /* stage Deploy the application ends*/
  
 }
 }
