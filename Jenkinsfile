@@ -16,10 +16,10 @@ stages {
  steps {
   script {
    echo "Installing Java"
-                sh 'sudo apt-get install -y default-jdk'
+                sh ' apt-get install -y default-jdk'
                
                     echo "Installing Maven"
-                sh 'sudo apt-get -y install maven'
+                sh ' apt-get -y install maven'
                 sh 'mvn -B -DskipTests clean package'
         sh 'mvn clean install'
     }
@@ -44,7 +44,7 @@ stages {
        sh 'docker build -t rakeshraheja89/project .'
        sh "docker login --username=$env.username --password=$env.password"
        sh 'docker push rakeshraheja89/project'
-    sh 'sudo docker run -p 3000:8090 -d  rakeshraheja89/project'
+    sh ' docker run -p 3000:8090 -d  rakeshraheja89/project'
   // sh 'sudo -i'
    //sh 'kubectl create -f application.yaml'
         
