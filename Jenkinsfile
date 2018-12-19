@@ -56,7 +56,7 @@ stages {
  {
 
 	kubernetesDeploy (
-	kubeconfigId: 'kubeconfig,
+	kubeConfigId: 'kubeconfig,
 	configs: 'application.yaml',
 	enableConfigSubstitution: false
 	)
