@@ -10,17 +10,6 @@ stages {
     }
    } /* code checkout ends */
  
- stage('Junit Test') {
-            steps {
-                sh 'mvn test'
-            }
-  
-        /*   post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                } 
-            }*/
-        } /* Junit test ends */
    
  stage('build customer app code') { 
  steps {
@@ -36,6 +25,17 @@ stages {
   }
  } /* Customer app code ends */
  
+ stage('Junit Test') {
+            steps {
+                sh 'mvn test'
+            }
+  
+        /*   post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                } 
+            }*/
+        } /* Junit test ends */
 
    stage('docker images code') { 
  steps {
