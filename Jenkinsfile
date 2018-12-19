@@ -50,5 +50,16 @@ stages {
     }
   }
   }
+ 
+ stage('Deploy the appl')
+ {
+
+	kubernetesDeploy (
+	kubeconfigId: 'kubeconfig,
+	configs: 'application.yaml',
+	enableConfigSubstitution: false
+	)
+}
+ 
 }
 }
