@@ -40,10 +40,10 @@ stages {
    stage('docker images code') { 
  steps {
   script {
-       sh 'docker build -t msshrinivas38/ninja-app .'
-       sh "docker login --username=$env.username --password=$env.pwd"
-       sh 'docker push msshrinivas38/ninja-app'
-   sh 'sudo docker run -p 3000:8090 -d  msshrinivas38/ninja-app'
+       sh 'docker build -t rakeshraheja89/project .'
+       sh "docker login --username=$env.username --password=$env.password"
+       sh 'docker push rakeshraheja89/project'
+   sh 'sudo docker run -p 3000:8090 -d  rakeshraheja89/project'
         
     }
   }
