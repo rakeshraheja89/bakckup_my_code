@@ -19,7 +19,7 @@ stages {
                // sh ' apt-get install -y default-jdk'
                
                     echo "Installing Maven"
-                sh ' apt-get -y install maven'
+             //   sh ' apt-get -y install maven'
                 sh 'mvn -B -DskipTests clean package'
         sh 'mvn clean install'
     }
