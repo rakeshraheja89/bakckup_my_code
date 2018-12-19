@@ -1,5 +1,5 @@
-FROM sivasunku/cobol-intbuilt:latest
-#FROM openjdk:8-jdk-alpine
+#FROM sivasunku/cobol-intbuilt:latest
+FROM openjdk:8-jdk-alpine
 WORKDIR /usr/src/app
 COPY . .
 EXPOSE 3001
