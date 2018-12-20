@@ -38,7 +38,7 @@ public class ReportingController {
 		List<ExchangeData> asiaExchangeData = reportingSPI.downloadData(filePath,"V2");
 		List<ExchangeData> allStockdata = reportingSPI.downloadData(filePath,"V3");
 		model.put("ExchangeData1", bombayExchangeData);
-		//model.put("ExchangeData2", asiaExchangeData);
+		model.put("ExchangeData2", asiaExchangeData);
 		//model.put("ExchangeData3", allStockdata);
 		return "view" ;
 	}
