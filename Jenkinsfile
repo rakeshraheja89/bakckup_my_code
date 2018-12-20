@@ -15,7 +15,7 @@ pipeline {
 	   stage('Python analysis generation') {
  		steps {
  			script {
-    				  sh  'pip install pandas numpy datetime'
+    				  sh  'sudo pip install pandas numpy datetime'
 				  sh 'python prepare_data/src/process_data-p1.py'
 				  //Story1
 				  //sh 'python prepare_data/src/process_data-p2.py'
