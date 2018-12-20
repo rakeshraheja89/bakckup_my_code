@@ -15,7 +15,7 @@ pipeline {
 	   stage('Python analysis generation') {
  		steps {
  			script {
-    				  sh  'sudo yum install -y python-pip'
+    				  sh  'yum install -y python-pip'
 				  sh  'pip install pandas numpy datetime'
 				  sh 'python prepare_data/src/process_data-p1.py'
 				  //Story1
