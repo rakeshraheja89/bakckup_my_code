@@ -12,6 +12,7 @@ pipeline {
     			}
    	    } /* code checkout ends */
   	
+	   /*
 	   stage('Python analysis generation') {
  		steps {
  			script {
@@ -26,7 +27,7 @@ pipeline {
      			       }
     			}
    	    } 
-	    
+	    */
  
    	 //Stage for Unit testing
 	   stage('Junit Test') {
