@@ -11,8 +11,19 @@ pipeline {
      				}
     			}
    	    } /* code checkout ends */
- 
-	    /* code checkout ends */
+  	
+	   stage('Python analysis generation') {
+ 		steps {
+ 			script {
+    				  sh 'python prepare_data/src/process_data-p1.py'
+				  //Story1
+				  //sh 'python prepare_data/src/process_data-p2.py'
+				  //Story2
+				  //sh 'python prepare_data/src/process_data-p2.py'
+     			       }
+    			}
+   	    } 
+	    
  
    	 //Stage for Unit testing
 	   stage('Junit Test') {
