@@ -38,9 +38,9 @@ stages {
             }*/
         } /* Junit test ends */
 	
-stage('Perform Soanrqube analysis')
+	stage('Perform Soanrqube analysis'){
 	 steps {
-                        {
+                        
 
                                 // Running sonarqube analysis
                                 sh "mvn sonar:sonar -Dsonar.host.url=http://api.aigdevopscoe.net:30002"
