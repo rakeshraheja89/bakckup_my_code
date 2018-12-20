@@ -1,4 +1,4 @@
-//4a2ef9c539c6c50fe9aca9a28fb519f0452c559b
+
 pipeline {
  	agent any
    stages {
