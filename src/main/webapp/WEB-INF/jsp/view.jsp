@@ -33,7 +33,7 @@
     </tr>
 </c:forEach>
 
-/*
+<%--
 <table cellspacing="4" cellpadding="4" border="3">
 
 <h3>       Data2
@@ -75,7 +75,7 @@
     </tr>
 </c:forEach>
 
-*/
+--%>
 
 </body>
 </html>
