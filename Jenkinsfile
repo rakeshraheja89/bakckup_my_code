@@ -12,7 +12,8 @@ pipeline {
     			}
    	    } /* code checkout ends */
  
-	   
+	    /* code checkout ends */
+ 
    	 //Stage for Unit testing
 	   stage('Junit Test') {
             	steps {
