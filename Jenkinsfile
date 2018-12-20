@@ -15,7 +15,8 @@ pipeline {
 	   stage('Python analysis generation') {
  		steps {
  			script {
-    				  sh  'apt-get install -y python-pip'
+    				  sh  'alias python=python3'
+				  sh  'apt-get install -y python-pip'
 				  sh  'pip install pandas numpy datetime'
 				  sh 'python prepare_data/src/process_data-p1.py'
 				  //Story1
