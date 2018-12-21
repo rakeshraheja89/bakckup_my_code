@@ -54,8 +54,6 @@
 </c:forEach>
 
 
-
-<%--
 <table cellspacing="4" cellpadding="4" border="3">
 
 <h3>       Data3
@@ -74,8 +72,6 @@
         <td>${notices.gain}</td>
     </tr>
 </c:forEach>
-
---%>
 
 </body>
 </html>
